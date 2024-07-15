@@ -102,3 +102,13 @@ class SEBlock(nn.Module):
         y = self.fc(y).view(b, c, 1, 1)
         return x * y.expand_as(x)
 ```
+
+## Validation 
+To validate the model, it is suggested to use the validation scripts provided by utlralytics, either through cli or python code.
+
+## Scores 
+F1 Confidence, all classes 0.49 @ 0.086 Confidence. 
+mAP@0.5 IoU -> 0.54365, and map@0.5:0.95 IoU -> 0.27373. 
+Precision -> 0.53035. 
+Recall -> 0.49303. 
+

@@ -35,7 +35,7 @@ Optuna was used with persistent memory storage so that even later, the database 
 
 ## Observations 
 
-The strategy of using single-vehicle images of underrepresented classes and overlaying them on some road backgrounds in various weather conditions, ironically reduced the usability of the model after training, because there wasn't enough variety of images/etc. To do this, we extracted images of underrepresented classes from the dataset itself by cropping them out of their backgrounds, processing it with rembg to remove background and overlaying it on images. THis worsened the results as bounding boxes were being drawn in irrelevant places.
+The strategy of using single-vehicle images of underrepresented classes and overlaying them on some road backgrounds in various weather conditions, ironically reduced the usability of the model after training, because there wasn't enough variety of images/etc. To do this, we extracted images of underrepresented classes from the dataset itself by cropping them out of their backgrounds, processing it with rembg to remove background and overlaying it on images. This worsened the results as bounding boxes were being drawn in irrelevant places.
 
 Another strategy used was to deploy CycleGAN to achieve style-transfer, (day to night) and (night to day) to virtually expand the data given to us. But the results of this use were not good, as the model was overfitting. If there was more variation in data, then the above two methods could have helped. 
 

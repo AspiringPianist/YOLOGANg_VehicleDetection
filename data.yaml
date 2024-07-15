@@ -1,0 +1,21 @@
+train: /home/studio-lab-user/sagemaker-studiolab-notebooks/images/train
+val: /home/studio-lab-user/sagemaker-studiolab-notebooks/dataset/images/val
+
+nc: 14
+names:
+  [
+    car,
+    bike,
+    auto,
+    rickshaw,
+    cycle,
+    bus,
+    minitruck,
+    truck,
+    van,
+    taxi,
+    motorvan,
+    toto,
+    train,
+    boat,
+  ]

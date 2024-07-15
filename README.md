@@ -29,7 +29,7 @@ On this particular dataset, after experimenting it was found out that if augment
 
 We have introduced the addition of another block in the architecture, (not visible, because changes were made in code). To the output of every C2f block in the YOLO architecture, we added a Squeeze and Excitation block (SE Block) which improves attention mechanism of the model according to some papers in 2019. This was done in the hopes that the model distinguishes better between the background and named classes. Although, the effect is minimal (0.267 mAP@0.5:0.95 to 0.273 mAP@0.5:0.95), it is still useful.
 
-In just around 5 to 10 epochs, once the correct hyperparameters were found by Optuna, we were able to take the pretrained yolov10m.pt model and make it achieve the mentioned metrics. Training time was only around 10-12mins on a free-tier Colab T4 GPU, and the model is lightweight, with it's 'pt' file being only 31.9mb in size.
+In just around 5 to 10 epochs, once the correct hyperparameters were found by Optuna, we were able to take the pretrained yolov10m.pt model and make it achieve the mentioned metrics. Training time was only around 10-12mins, once hyperparameters were foudn on a free-tier Colab T4 GPU, and the model is lightweight, with it's 'pt' file being only 31.9mb in size.
 
 Optuna was used with persistent memory storage so that even later, the database used by optuna to find the right parameters can be accessed. This makes it future proof for better fine-tuning.
 
